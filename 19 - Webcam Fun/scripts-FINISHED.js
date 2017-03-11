@@ -16,7 +16,7 @@ function getVideo() {
     });
 }
 
-function paintToCanvas() {
+function paintToCanavas() {
   const width = video.videoWidth;
   const height = video.videoHeight;
   canvas.width = width;
@@ -99,4 +99,4 @@ function greenScreen(pixels) {
 
 getVideo();
 
-video.addEventListener('canplay', paintToCanvas);
+video.addEventListener('canplay', paintToCanavas);

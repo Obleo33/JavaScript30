@@ -55,6 +55,25 @@
 
 <script>
 
+const nav = document.querySelector('#main');
+
+// find the top of the nav
+let topOfNav = nav.offsetTop;
+
+function fixNav() {
+  if(window.scrollY >= topOfNav) {
+    // if you have scrolled to the top add class of fixed-nav to body and add
+    // padding to equate for the nav being pulled out of document flow
+    document.body.style.paddingTop = nav.offsetHeight + 'px';
+    document.body.classList.add('fixed-nav');
+  } else {
+    document.body.classList.remove('fixed-nav');
+    document.body.style.paddingTop = 0;
+  }
+}
+
+window.addEventListener('scroll', fixNav);
+
 </script>
 
 </body>
